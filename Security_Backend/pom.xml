@@ -8,11 +8,11 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>Proyecto.Registraduria</groupId>
-	<artifactId>MainSecurity</artifactId>
+	<groupId>Registraduria.Backend.Security</groupId>
+	<artifactId>Security_Backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MainSecurity</name>
-	<description>Proyecto Registraduria, backend seguridad</description>
+	<name>Security_Backend</name>
+	<description>Proyecto Final, Backend Seguridad </description>
 	<properties>
 		<java.version>19</java.version>
 	</properties>

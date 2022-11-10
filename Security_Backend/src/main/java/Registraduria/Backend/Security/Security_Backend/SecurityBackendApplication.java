@@ -1,13 +1,13 @@
-package Proyecto.Registraduria.Security;
+package Registraduria.Backend.Security.Security_Backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SecurityApplicationTests {
+public class SecurityBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SecurityApplicationTests.class, args);
+		SpringApplication.run(SecurityBackendApplication.class, args);
 	}
 
 }
