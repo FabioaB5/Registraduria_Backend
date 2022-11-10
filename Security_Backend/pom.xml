@@ -8,13 +8,13 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>Registraduria.Backend.Security</groupId>
-	<artifactId>Security_Backend</artifactId>
+	<groupId>ciclo4.grupo37.misiontic.org</groupId>
+	<artifactId>MainSecurity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Security_Backend</name>
-	<description>Proyecto Final, Backend Seguridad </description>
+	<name>MainSecurity</name>
+	<description>Backend de seguridad para el proyecto de votaciones</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

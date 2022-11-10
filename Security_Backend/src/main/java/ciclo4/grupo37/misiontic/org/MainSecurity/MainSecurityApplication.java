@@ -1,13 +1,13 @@
-package Registraduria.Backend.Security.Security_Backend;
+package ciclo4.grupo37.misiontic.org.MainSecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SecurityBackendApplication {
+public class MainSecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SecurityBackendApplication.class, args);
+		SpringApplication.run(MainSecurityApplication.class, args);
 	}
 
 }

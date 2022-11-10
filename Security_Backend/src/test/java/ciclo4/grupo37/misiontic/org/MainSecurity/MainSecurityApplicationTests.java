@@ -1,10 +1,10 @@
-package Registraduria.Backend.Security.Security_Backend;
+package ciclo4.grupo37.misiontic.org.MainSecurity;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SecurityBackendApplicationTests {
+class MainSecurityApplicationTests {
 
 	@Test
 	void contextLoads() {
