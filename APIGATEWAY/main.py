@@ -17,7 +17,7 @@ from flask_jwt_extended import JWTManager
 ######################################
 ##    CREAR TOKEN O MÉTODO LOGIN    ##
 ######################################
-app.config["JWT_SECRET_KEY"]='super-secret' #puedes colocar la contraseña que quieras
+app.config["JWT_SECRET_KEY"]='super-secret' 
 jwt = JWTManager(app)
 
 @app.route("/login", methods=['POST'])
@@ -28,7 +28,7 @@ def create_token():
     response = requests.post(url, json=data, headers=headers)
     if response.status_code == 200:
         user = response.json()
-        expires = datetime.timedelta(seconds=60*60*24)#Un día en segundos
+        expires = datetime.timedelta(seconds=60*60*24)
         access_token = create_access_token(identity=user,
             expires_delta=expires)
         return jsonify({"token": access_token,
@@ -96,7 +96,7 @@ def getMesas():
 
 @app.route("/mesas", methods=["POST"])
 def crearMesas():
-    data = request.get_json() #Para los datos que llegan en el body
+    data = request.get_json() 
     headers= {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-votes"]+'/mesas'
     response = requests.post(url, headers=headers, json=data)
@@ -113,7 +113,7 @@ def getMesa(id):
 
 @app.route("/mesas/<string:id>", methods=["PUT"])
 def modificarMesas(id):
-    data = request.get_json() #Para los datos que llegan en el body
+    data = request.get_json() 
     headers= {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-votes"]+'/mesas/'+id
     response = requests.put(url, headers=headers, json=data)
@@ -141,7 +141,7 @@ def getPartidos():
 
 @app.route("/partidos", methods=["POST"])
 def crearPartidos():
-    data = request.get_json() #Para los datos que llegan en el body
+    data = request.get_json() 
     headers= {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-votes"]+'/partidos'
     response = requests.post(url, headers=headers, json=data)
@@ -158,7 +158,7 @@ def getPartido(id):
 
 @app.route("/partidos/<string:id>", methods=["PUT"])
 def modificarPartido(id):
-    data = request.get_json() #Para los datos que llegan en el body
+    data = request.get_json() 
     headers= {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-votes"]+'/partidos/'+id
     response = requests.put(url, headers=headers, json=data)
@@ -186,7 +186,7 @@ def getCandidatos():
 
 @app.route("/candidatos", methods=["POST"])
 def crearCandidato():
-    data = request.get_json() #Para los datos que llegan en el body
+    data = request.get_json() 
     headers= {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-votes"]+'/candidatos'
     response = requests.post(url, headers=headers, json=data)
@@ -203,7 +203,7 @@ def getCandidato(id):
 
 @app.route("/candidatos/<string:id>", methods=["PUT"])
 def modificarCandidato(id):
-    data = request.get_json() #Para los datos que llegan en el body
+    data = request.get_json() 
     headers= {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-votes"]+'/candidatos/'+id
     response = requests.put(url, headers=headers, json=data)
@@ -275,8 +275,6 @@ def eliminarResultado(id):
     Json = response.json()
     return jsonify(Json)
 
-
-# Mirar los resultados de una mesa en particular
 @app.route("/resultados/mesa/<string:id>", methods=['GET'])
 def votosEnMesa(id):
     headers= {"Content-Type": "application/json; charset=utf-8"}
@@ -285,7 +283,6 @@ def votosEnMesa(id):
     Json = response.json()
     return jsonify(Json)
 
-#votos de un candidato en todas las mesas 
 @app.route("/resultados/mesas/<string:id>", methods=['GET'])
 def votosCandidato(id):
     headers= {"Content-Type": "application/json; charset=utf-8"}
@@ -293,7 +290,7 @@ def votosCandidato(id):
     response = requests.get(url, headers=headers)
     Json = response.json()
     return jsonify(Json)
-#Conteo de votos
+
 @app.route("/resultados/documento", methods=['GET'])
 def getConteoVotos():
     headers= {"Content-Type": "application/json; charset=utf-8"}
@@ -302,13 +299,12 @@ def getConteoVotos():
     Json = response.json()
     return jsonify(Json)
 
-
 ######################################
 ##     TEST O PRUEBA DE SERVICIO    ##
 ######################################
 @app.route("/", methods=['GET'])
 def test():
-    #variable de paso
+    
     Json = {}
     Json["Message"] = "Server Running ..."
     return jsonify(Json)
