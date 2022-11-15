@@ -306,7 +306,7 @@ def getConteoVotos():
 def test():
     
     Json = {}
-    Json["Message"] = "Server Running ..."
+    Json["Message"] = "Server Runening ..."
     return jsonify(Json)
 
 def loadFileConfig():
