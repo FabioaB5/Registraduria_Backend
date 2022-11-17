@@ -178,6 +178,5 @@ def getMaxDocument():
     json = miControladorResultado.getMayorCedula()
     return jsonify(json)
 
-
 if __name__ == "__main__":
     app.run(debug=False, port=9000)
