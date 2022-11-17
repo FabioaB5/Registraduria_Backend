@@ -8,7 +8,7 @@ ca = certifi.where()
 #   CARGA ARCHIVOS CONFIGURACION     #
 ######################################
 def loadConfigFile():
-    with open(r'C:\Users\ANDRES\Documents\8. PROJECT\Registraduria_Backend\FlaskMongo\database\config.json') as f:
+    with open(r'C:\Users\ANDRES\Documents\8. PROJECT\Registraduria\Results_Backend\database\config.json') as f:
         data = json.load(f)
     return data
 
